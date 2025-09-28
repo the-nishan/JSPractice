@@ -30,3 +30,23 @@ equalityCheck = (a) =>{
     }
 }
 console.log(equalityCheck(7));
+
+
+sortPositiveAndNegetive = (arr)=>{
+    let i = 0;
+    let positive = [];
+    let negetive = [];
+    while(i<arr.length){
+     
+
+    if(arr[i]<0){
+        negetive.push(arr[i]);
+    } else {
+        positive.push(arr[i]);
+    }
+       i++;
+    }
+    return { positive, negetive};
+}
+let arr = [2,4,-8,-4];
+console.log(sortPositiveAndNegetive(arr));
