@@ -6,3 +6,15 @@ voterEligibility = (age) =>{
     }
 }
 console.log(voterEligibility(10));
+
+
+// login with id pass example
+
+loginServer = (ID, password)=>{
+    if (ID === true && password === true){
+        return "Login successfull!!";
+    } else {
+        return "Try again!";
+    }
+}
+console.log(loginServer(true, true));
