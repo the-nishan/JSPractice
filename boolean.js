@@ -18,3 +18,15 @@ loginServer = (ID, password)=>{
     }
 }
 console.log(loginServer(true, true));
+
+
+// equality function
+
+equalityCheck = (a) =>{
+    if (a == 12){
+        return "Equal";
+    } else {
+        return "Not equal";
+    }
+}
+console.log(equalityCheck(7));
