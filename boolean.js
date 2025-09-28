@@ -50,3 +50,27 @@ sortPositiveAndNegetive = (arr)=>{
 }
 let arr = [2,4,-8,-4];
 console.log(sortPositiveAndNegetive(arr));
+
+
+
+// chain if..else
+
+    chainCondition = (number) =>{
+        if(number>0 && number<5) {
+            return "Its Tiny!";
+        }
+        if(number>=5 && number<10) {
+            return "Its Small!";
+        }
+        if(number>=10 && number<15) {
+            return "Its Medium!";
+        }
+        if(number>=15 && number<20) {
+            return "Its Big!";
+        }
+          if(number>=20) {
+            return "Its Huge!";
+        }
+        return number;
+    }
+    console.log(chainCondition(100));
