@@ -2,6 +2,6 @@ const arrayOfFruits = ["apple","banana"];
 
 
 arrayOfFruits.push("orange");
-arrayOfFruits.pop()
+arrayOfFruits.pop() // pop last one.
 
 console.log(arrayOfFruits);
