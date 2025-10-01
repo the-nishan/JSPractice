@@ -123,24 +123,49 @@
 
 //switch function for calculation
 
-calculation = (op, n1, n2) => {
-    switch (op) {
-        case "add":
-            return n1+n2;
+// calculation = (op, n1, n2) => {
+//     switch (op) {
+//         case "add":
+//             return n1+n2;
+//             break;
+//         case "substract":
+//             return n1-n2;
+//             break;
+//         case "multiply":
+//             return n1*n2;
+//             break;
+//         case "divide":
+//             return n1/n2;
+//             break;
+//             default:
+//                 return "invalid input!";
+
+//     }
+// }
+// console.log(calculation("add",9,10));
+// console.log(calculation("divide",10,5));
+
+// conversion of number to word
+
+digitToWord = (num) => {
+    switch(num) {
+        case 1:
+            return "One";
             break;
-        case "substract":
-            return n1-n2;
+        case 2:
+            return "Two";
             break;
-        case "multiply":
-            return n1*n2;
+        case 3:
+            return "Three";
             break;
-        case "divide":
-            return n1/n2;
+        case 4:
+            return "Four";
+            break;
+        case 5:
+            return "Five";
             break;
             default:
-                return "invalid input!";
-
+                return "N/A";
     }
 }
-console.log(calculation("add",9,10));
-console.log(calculation("divide",10,5));
+console.log(digitToWord(2));
