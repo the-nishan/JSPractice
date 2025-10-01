@@ -7,7 +7,6 @@
 // }
 // console.log(voterEligibility(10));
 
-
 // // login with id pass example
 
 // loginServer = (ID, password)=>{
@@ -18,7 +17,6 @@
 //     }
 // }
 // console.log(loginServer(true, true));
-
 
 // // equality function
 
@@ -31,13 +29,11 @@
 // }
 // console.log(equalityCheck(7));
 
-
 // sortPositiveAndNegetive = (arr)=>{
 //     let i = 0;
 //     let positive = [];
 //     let negetive = [];
 //     while(i<arr.length){
-     
 
 //     if(arr[i]<0){
 //         negetive.push(arr[i]);
@@ -50,8 +46,6 @@
 // }
 // let arr = [2,4,-8,-4];
 // console.log(sortPositiveAndNegetive(arr));
-
-
 
 // // chain if..else
 
@@ -78,27 +72,27 @@
 //     // switch statement
 //      let day = 9;
 //     switch(day) {
-//         case 1: 
+//         case 1:
 //         console.log("Saturday");
 //         break;
-//         case 2: 
+//         case 2:
 //         console.log("SUNDAY");
 //         break;
-//         case 3: 
+//         case 3:
 //         console.log("Monday");
 //         break;
-//         case 4: 
+//         case 4:
 //         console.log("Tuesday");
 //         break;
-//         case 5: 
+//         case 5:
 //         console.log("Wednesday");
 //         break;
-//         case 6: 
+//         case 6:
 //         console.log("Thrusday");
 //         break;
-//         default: 
+//         default:
 //         console.log("Friday");
-        
+
 //     }
 
 //    caseInSwitch =(val)=> {
@@ -119,7 +113,6 @@
 // return answer;
 //    }
 //    console.log(caseInSwitch(3));
-
 
 //switch function for calculation
 
@@ -147,7 +140,7 @@
 
 // conversion of number to word
 
-digitToWord = (num) => {
+/*digitToWord = (num) => {
     switch(num) {
         case 1:
             return "One";
@@ -168,4 +161,24 @@ digitToWord = (num) => {
                 return "N/A";
     }
 }
-console.log(digitToWord(2));
+console.log(digitToWord(2));*/
+
+
+
+// Season of the year
+
+seasons = (month) => {
+  switch (month) {
+    case "December":
+    case "January":
+    case "February":
+      return "Winter";
+    case "March":
+    case "April":
+    case "May":
+      return "Spring";
+      default:
+        return "N/A";
+  }
+};
+console.log(seasons("December"));
