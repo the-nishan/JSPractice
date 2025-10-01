@@ -100,5 +100,17 @@ console.log(sortPositiveAndNegetive(arr));
         console.log("Friday");
         
     }
-   
+
+    let color = "red";
+switch(color) {
+    case 1:
+        console.log("STOP");
+        break;
+    case 2:
+        console.log("GO!");
+        break;
+        default:
+            console.log("Wait!");
+
+}
 
