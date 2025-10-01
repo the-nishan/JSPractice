@@ -68,9 +68,37 @@ console.log(sortPositiveAndNegetive(arr));
         if(number>=15 && number<20) {
             return "Its Big!";
         }
-          if(number>=20) {
+          else {
             return "Its Huge!";
         }
         return number;
     }
-    console.log(chainCondition(100));
+    console.log(chainCondition(22));
+
+    // switch statement
+     let day = 9;
+    switch(day) {
+        case 1: 
+        console.log("Saturday");
+        break;
+        case 2: 
+        console.log("SUNDAY");
+        break;
+        case 3: 
+        console.log("Monday");
+        break;
+        case 4: 
+        console.log("Tuesday");
+        break;
+        case 5: 
+        console.log("Wednesday");
+        break;
+        case 6: 
+        console.log("Thrusday");
+        break;
+        default: 
+        console.log("Friday");
+        
+    }
+   
+
