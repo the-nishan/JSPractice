@@ -16,13 +16,27 @@ let sum = (accu, ele) => {
 let summation = arr1.reduce(sum);
 console.log(summation); */
 
-//example 2 = product of array
+/* //example 2 = product of array
 
 let arr2 = [2, 7, 0.000001];
 
 funcProduct = (acc, ele) => {
-  return acc * ele;
+    return acc * ele;
 };
 
 let getProduct = arr2.reduce(funcProduct);
-console.log(getProduct);
+console.log(getProduct); */
+
+
+
+// example 3 = count element of array
+
+let numbers = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+
+funcCount = (acc, ele) => {
+    acc[ele] = (acc[ele] || 0) +1;
+    return acc;
+}
+
+let getCount = numbers.reduce(funcCount ,{});
+console.log(getCount);
