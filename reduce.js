@@ -65,6 +65,8 @@ concateArr = arrays.reduce(funcConcateArr);
 console.log(concateArr); */
 
 
+
+//count even number
 let arrays = [1, 2, 3, 4, 5, 6, 7];
 
 
@@ -77,3 +79,4 @@ funcGetEven = (acc, ele) => {
 
 getEven = arrays.reduce(funcGetEven,0);
 console.log(getEven);
+//answer: 3
