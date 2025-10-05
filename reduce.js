@@ -55,11 +55,25 @@ console.log(concateWords); */
 
 //concat numbers
 
-let arrays = [[1, 2], [3, 4], [5, 6]];
+/* let arrays = [[1, 2], [3, 4], [5, 6]];
 
 funcConcateArr = (x,y) => {
     return x.concat(y);
 }
 
 concateArr = arrays.reduce(funcConcateArr);
-console.log(concateArr);
+console.log(concateArr); */
+
+
+let arrays = [1, 2, 3, 4, 5, 6, 7];
+
+
+funcGetEven = (acc, ele) => {
+    if(ele % 2 === 0){
+   acc++;
+    }
+    return acc;
+}
+
+getEven = arrays.reduce(funcGetEven,0);
+console.log(getEven);
