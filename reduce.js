@@ -31,7 +31,7 @@ console.log(getProduct); */
 
 // example 3 = count element of array
 
-let numbers = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+/* let numbers = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
 
 funcCount = (acc, ele) => {
     acc[ele] = (acc[ele] || 0) +1;
@@ -39,4 +39,14 @@ funcCount = (acc, ele) => {
 }
 
 let getCount = numbers.reduce(funcCount ,{});
-console.log(getCount);
+console.log(getCount); */
+
+
+let words = ["I", "am", "Anhar"];
+
+funcConcate = (acc, ele) => {
+return acc + " " + ele;
+}
+
+concateWords = words.reduce(funcConcate);
+console.log(concateWords);
