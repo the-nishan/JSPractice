@@ -88,7 +88,7 @@ console.log(getSum);
 
 
 
-function calc(num1,num2,oper="add") {
+/* function calc(num1,num2,oper="add") {
 
 switch (oper) {
   case "add":
@@ -102,4 +102,13 @@ switch (oper) {
 }
 
 }
-console.log(calc(10,5));
+console.log(calc(10,5)); */
+
+
+let arr = ["a", "b", "c", "d"];
+
+revArr = (arr) => {
+arr.reverse();
+  return arr;
+}
+console.log(revArr(arr));
