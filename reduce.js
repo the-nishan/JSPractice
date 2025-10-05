@@ -42,6 +42,7 @@ let getCount = numbers.reduce(funcCount ,{});
 console.log(getCount); */
 
 
+/* //concat string
 let words = ["I", "am", "Anhar"];
 
 funcConcate = (acc, ele) => {
@@ -49,4 +50,16 @@ return acc + " " + ele;
 }
 
 concateWords = words.reduce(funcConcate);
-console.log(concateWords);
+console.log(concateWords); */
+
+
+//concat numbers
+
+let arrays = [[1, 2], [3, 4], [5, 6]];
+
+funcConcateArr = (x,y) => {
+    return x.concat(y);
+}
+
+concateArr = arrays.reduce(funcConcateArr);
+console.log(concateArr);
