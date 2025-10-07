@@ -15,7 +15,7 @@ console.log(funcBreak([5, 4, 9, 6, 2, 7, 1, 4, 6, 9])); */
 
 
 //mobile example
-let funcMobile = (word) => {
+/* let funcMobile = (word) => {
     i=0;
     finalResult=[];
 
@@ -29,4 +29,21 @@ i++;
     }
     return finalResult;
 }
-console.log(funcMobile("mobile"));
+console.log(funcMobile("mobile")); */
+
+
+//skip even numbers
+let funcSkipEven = (nums) => {
+let i = 0;
+let evens = [];
+
+while(i<nums.length) {
+    if(nums[i]%2 !== 0) {
+        continue;
+    }
+    evens.push(nums[i]);
+    i++;
+}
+return evens;
+}
+console.log(funcSkipEven([1,2,3,4,5,6,7,8,9,0]));
