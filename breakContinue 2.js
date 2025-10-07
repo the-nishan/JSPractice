@@ -33,7 +33,7 @@ console.log(funcMobile("mobile")); */
 
 
 //refine even numbers
-let funcSkipEven = (nums) => {
+/* let funcSkipEven = (nums) => {
 let i = 0;
 let evens = [];
 
@@ -47,4 +47,21 @@ while(i<nums.length) {
 }
 return evens;
 }
-console.log(funcSkipEven([1,2,3,4,5,6,7,8,9,0]));
+console.log(funcSkipEven([1,2,3,4,5,6,7,8,9,0])); */
+
+//skip negative numbers
+let funcSkipNeg = (nums) => {
+  let i=0;
+  let positives=[];
+
+  while(i<nums.length) {
+    if(nums[i]<0) {
+      i++;
+      continue;
+    }
+    positives.push(nums[i]);
+    i++;
+  }
+  return positives;
+}
+console.log(funcSkipNeg([3, -1, 7, -9, 5, -2]));
