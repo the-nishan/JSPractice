@@ -105,10 +105,12 @@ switch (oper) {
 console.log(calc(10,5)); */
 
 
-let arr = ["a", "b", "c", "d"];
+/* let arr = ["a", "b", "c", "d"];
 
 revArr = (arr) => {
 arr.reverse();
   return arr;
 }
-console.log(revArr(arr));
+console.log(revArr(arr)); */
+
+

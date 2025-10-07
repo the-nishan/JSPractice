@@ -80,3 +80,4 @@ funcGetEven = (acc, ele) => {
 getEven = arrays.reduce(funcGetEven,0);
 console.log(getEven);
 //answer: 3
+
