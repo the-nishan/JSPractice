@@ -32,13 +32,14 @@ i++;
 console.log(funcMobile("mobile")); */
 
 
-//skip even numbers
+//refine even numbers
 let funcSkipEven = (nums) => {
 let i = 0;
 let evens = [];
 
 while(i<nums.length) {
     if(nums[i]%2 !== 0) {
+      i++;
         continue;
     }
     evens.push(nums[i]);
