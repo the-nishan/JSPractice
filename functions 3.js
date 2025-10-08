@@ -114,3 +114,18 @@ arr.reverse();
 console.log(revArr(arr)); */
 
 
+let notDevByThree = (num) => {
+  let i = 0;
+  let final = [];
+
+  while(i<num.length) {
+    if(num[i]%3 !==0) {
+      i++;
+      continue;
+    }
+    final.push(num[i]);
+    i++;
+  }
+  return final;
+}
+console.log(notDevByThree([4, 6, 8, 3,9, 0, 1]));
