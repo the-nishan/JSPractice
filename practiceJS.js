@@ -86,7 +86,7 @@ console.log(funcFindEvenNumber([1, 2, 3, 4, 5, 6, 7, 8, 9])); */
 
 
 //funcFindEvenNumber.  Break/Continue
-let funcFindEvenNumber = (set) => {
+/* let funcFindEvenNumber = (set) => {
 let range = [];
   for(let i=0;i<set.length;i++) {
     if (set[i]%2 !== 0) {
@@ -96,4 +96,24 @@ let range = [];
 }
 return range;
 }
-console.log(funcFindEvenNumber([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(funcFindEvenNumber([1, 2, 3, 4, 5, 6, 7, 8, 9])); */
+
+
+
+funcBubbleSort = (set) => {
+let i=0;
+let j=1;
+let sorted = [];
+
+for(let i=0;i<set.length;i++) {
+  for(let j=1;j<set.length;j++) {
+
+  if(set[i]>set[j]) {
+    set[j]=set[i];
+  }
+  i++;
+  }
+}
+ return (sorted);
+}
+console.log(funcBubbleSort([34, 7, 23, 32, 5, 62, 12, 9, 17, 45]));
