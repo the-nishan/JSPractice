@@ -36,7 +36,7 @@ for(let hhh in student) {
 
 
 //5
-let nums = [10, 20, 30, 40];
+/* et nums = [10, 20, 30, 40];
 let i = 0;
 let sum = 0;
 
@@ -47,4 +47,18 @@ funcGetSum = (nums) => {
     }
     return sum;
 }
-console.log(funcGetSum(nums));
+console.log(funcGetSum(nums)); */
+
+
+
+//making an array sorted first, then remove duplicates
+let funcUniqueAndSortArray = (numbers) => {
+  let finalResult = [...new Set(numbers.sort((a, b) => a - b))];
+
+  return finalResult;
+};
+console.log(
+  funcUniqueAndSortArray([
+    5, 7, 3, 9, 4, 5, 2, 8, 9, 8, 5, 9, 5, 1, 3, 2, 0, 1, 5,
+  ])
+);
