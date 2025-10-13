@@ -6,7 +6,6 @@ while (value<=5) {
      value++;
 }; */
 
-
 //2
 /* let fruits = ["apple", "banana", "mango"];
 
@@ -21,7 +20,6 @@ for(let characters of word) {
     console.log(characters);
 }; */
 
-
 //4
 
 /* let student = { 
@@ -33,7 +31,6 @@ for(let characters of word) {
 for(let hhh in student) {
     console.log(hhh , ":" , student[hhh]);
 } */
-
 
 //5
 /* et nums = [10, 20, 30, 40];
@@ -49,10 +46,8 @@ funcGetSum = (nums) => {
 }
 console.log(funcGetSum(nums)); */
 
-
-
 //making an array sorted first, then remove duplicates
-let funcUniqueAndSortArray = (numbers) => {
+/* let funcUniqueAndSortArray = (numbers) => {
   let finalResult = [...new Set(numbers.sort((a, b) => a - b))];
 
   return finalResult;
@@ -62,3 +57,17 @@ console.log(
     5, 7, 3, 9, 4, 5, 2, 8, 9, 8, 5, 9, 5, 1, 3, 2, 0, 1, 5,
   ])
 );
+ */
+
+
+//find factorial
+
+let funcFactorial = number => {
+let Factorial = 1;
+for(let i=1; i<=number;i++) {
+    Factorial *=i;
+}
+    return Factorial;
+}
+console.log(funcFactorial(5));
+
