@@ -100,20 +100,13 @@ console.log(funcFindEvenNumber([1, 2, 3, 4, 5, 6, 7, 8, 9])); */
 
 
 
-funcBubbleSort = (set) => {
-let i=0;
-let j=1;
-let sorted = [];
+//find factorial
 
-for(let i=0;i<set.length;i++) {
-  for(let j=1;j<set.length;j++) {
-
-  if(set[i]>set[j]) {
-    set[j]=set[i];
-  }
-  i++;
-  }
+let funcFactorial = number => {
+let Factorial = 1;
+for(let i=1; i<=number;i++) {
+    Factorial *=i;
 }
- return (sorted);
+    return Factorial;
 }
-console.log(funcBubbleSort([34, 7, 23, 32, 5, 62, 12, 9, 17, 45]));
+console.log(funcFactorial(5));
