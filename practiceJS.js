@@ -102,11 +102,29 @@ console.log(funcFindEvenNumber([1, 2, 3, 4, 5, 6, 7, 8, 9])); */
 
 //find factorial
 
-let funcFactorial = number => {
+/* let funcFactorial = number => {
 let Factorial = 1;
 for(let i=1; i<=number;i++) {
     Factorial *=i;
 }
     return Factorial;
 }
-console.log(funcFactorial(5));
+console.log(funcFactorial(5)); */
+
+
+
+//find longest word
+let funcFindLongestWord = (sentence) => {
+  let splitSentence = sentence.split(" ");
+  let longest =[];
+
+  for(let currentWord of splitSentence) {
+if(currentWord.length > longest.length) {
+  longest=currentWord;
+}
+
+  }
+
+  return longest;
+}
+console.log(funcFindLongestWord("amar sonar bangla"));
