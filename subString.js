@@ -1,10 +1,7 @@
-var isSubString = (mainString, subString) =>{
-let compareSubString = mainString.includes(subString);
+var isSubString = (mainString, subString) => {
+    
+    return mainString.includes(subString)
 
-
-
-
-   return compareSubString;
 }
 
 console.log(isSubString("amar sonar bangla.","bangla")) // Should return true
