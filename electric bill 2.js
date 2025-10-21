@@ -2,7 +2,10 @@ let electricBill = (units) => {
   let iniUnit = 0;
   let iniBill = 0;
 
-  if (units <= 100) {
+
+if (units <= 0) {
+    iniBill = Math.abs(units * 0);
+ } else if (units > 0 && units <= 100) {
     iniBill = units * 10;
   } else if (units > 100 && units <= 300) {
     iniUnit = units - 100;
@@ -20,4 +23,4 @@ let electricBill = (units) => {
 
   return iniBill;
 };
-console.log(electricBill(750));
+console.log(electricBill(2000));
