@@ -20,7 +20,13 @@ if (units <= 0) {
     iniUnit = units - 700;
     iniBill = 100 * 10 + 200 * 12 + 200 * 15 + 200 * 20 + iniUnit * 25;
   }
+  if (iniBill>=4000 && iniBill<8000) {
+    iniBill=iniBill+200
+  } else if (iniBill>=8000 && iniBill<20000) {
+    iniBill=iniBill+500
+  } else 
+    iniBill=iniBill+5000
 
   return iniBill;
 };
-console.log(electricBill(2000));
+console.log(electricBill(5000));
