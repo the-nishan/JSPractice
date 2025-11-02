@@ -39,6 +39,7 @@ let electricBill = (units) => {
       iniBill = iniBill + 200;
       overBillCount1++;
       range1 = overBillCount1 * 200;
+      iniBill+=range1;
     } else if (iniBill >= 8000 && iniBill < 20000) {
       iniBill = iniBill + 500;
       overBillCount2++;
@@ -53,11 +54,13 @@ let electricBill = (units) => {
     ExtraAmount = range1 + range2 + range3;
     DiscountAmount = ExtraAmount / lessBillCount;
   }
+
+  discountedValues=lessResult.map(x=>x-DiscountAmount)
   return {
     "Bill is": TotalBill,
     "Over bill users compensation": ExtraAmount,
     "Discount rate": DiscountAmount,
-    "Individual User bill of less use": lessResult,
+    "Individual User bill of less use": discountedValues,
 
   };
 };
