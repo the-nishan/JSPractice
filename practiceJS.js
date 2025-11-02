@@ -114,17 +114,30 @@ console.log(funcFactorial(5)); */
 
 
 //find longest word
-let funcFindLongestWord = (sentence) => {
-  let splitSentence = sentence.split(" ");
-  let longest =[];
+// let funcFindLongestWord = (sentence) => {
+//   let splitSentence = sentence.split(" ");
+//   let longest =[];
 
-  for(let currentWord of splitSentence) {
-if(currentWord.length > longest.length) {
-  longest=currentWord;
+//   for(let currentWord of splitSentence) {
+// if(currentWord.length > longest.length) {
+//   longest=currentWord;
+// }
+
+//   }
+
+//   return longest;
+// }
+// console.log(funcFindLongestWord("amar sonar bangla"));
+
+
+// 
+let arr1 = [1, 2, 3, 4];
+let arr2 = [3, 4, 5, 6];
+
+let mergeAnArraySortAccendingRemoveDuplicate=()=>{
+let mergedNewArray=arr1.concat(arr2);
+let finalArray=[...new Set(mergedNewArray.sort((a,b)=>a-b))];
+
+return finalArray;
 }
-
-  }
-
-  return longest;
-}
-console.log(funcFindLongestWord("amar sonar bangla"));
+console.log(mergeAnArraySortAcendingRemoveDuplicate());
