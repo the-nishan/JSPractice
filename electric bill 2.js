@@ -11,9 +11,11 @@ let electricBill = (units) => {
   let range3 = 0;
   let ExtraAmount = 0;
   let DiscountAmount = 0;
-  let lessResult=[];
+  let lessResult = [];
+  let moreBillResult = [];
 
   for (let i = 0; i < units.length; i++) {
+    // initial bill based on unit
     if (units[i] <= 0) {
       iniBill = 0;
     } else if (units[i] > 0 && units[i] <= 100) {
@@ -31,37 +33,45 @@ let electricBill = (units) => {
       iniUnit = units[i] - 700;
       iniBill = 100 * 10 + 200 * 12 + 200 * 15 + 200 * 20 + iniUnit * 25;
     }
-    if (iniBill > 0 && iniBill < 4000) {
-      iniBill = iniBill;
+
+    // extra charges based on bill ranges
+    if (iniBill >= 0 && iniBill < 4000) {
       lessBillCount++;
       lessResult.push(iniBill);
     } else if (iniBill >= 4000 && iniBill < 8000) {
-      iniBill = iniBill + 200;
+      iniBill += 200;
       overBillCount1++;
       range1 = overBillCount1 * 200;
-      iniBill+=range1;
+      moreBillResult.push(iniBill);
     } else if (iniBill >= 8000 && iniBill < 20000) {
-      iniBill = iniBill + 500;
+      iniBill += 500;
       overBillCount2++;
       range2 = overBillCount2 * 500;
+      moreBillResult.push(iniBill);
     } else if (iniBill >= 20000) {
-      iniBill = iniBill + 5000;
+      iniBill += 5000;
       overBillCount3++;
       range3 = overBillCount3 * 5000;
+      iniBill += range3;
+      moreBillResult.push(iniBill);
     }
 
-    TotalBill = iniBill + TotalBill;
+    // totals and discounts
+    TotalBill += iniBill;
     ExtraAmount = range1 + range2 + range3;
-    DiscountAmount = ExtraAmount / lessBillCount;
+    DiscountAmount = ExtraAmount / (lessBillCount || 1);
   }
 
-  discountedValues=lessResult.map(x=>x-DiscountAmount)
-  return {
-    "Bill is": TotalBill,
-    "Over bill users compensation": ExtraAmount,
-    "Discount rate": DiscountAmount,
-    "Individual User bill of less use": discountedValues,
+  // discount to smaller bills
+  let discountedValues = lessResult.map((x) => Math.max(0, x - DiscountAmount));
 
+  // final results
+  let finalElecBill = discountedValues.concat(moreBillResult);
+
+  return {
+    "Individual User bill": finalElecBill,
   };
 };
-console.log(electricBill([50, 100, 300, 500, 700, 1000]));
+
+// data
+console.log(electricBill([-80, 10, 50, 100, 300, 500, 700, 1000, 1500]));
